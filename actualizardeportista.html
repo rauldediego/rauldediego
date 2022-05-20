@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="constantes.js"></script>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <script src="Actualizar_Deportista.js"></script>
+    <script src="Baja_Deportista.js"></script>
+    <link rel="stylesheet" href="actualizardeportistas.css">
+    <title>Actualizar Datos Deportista</title>
+</head>
+<body>
+    <div class="contenedor">   
+        <div class="divindex">
+            <img class="cabeceraimagen" src="imagenes web litho/cabecera litojudo.jpg" alt="">
+        </div>
+        <div class="general">
+            <div class="izquierdo">
+                
+                <div class="imagen">
+                    <img class="imagenes" src="imagenes web litho/judo para todos.jpg" alt="logo1">
+                </div>
+                <div class="imagen">
+                    <img class="imagenes" src="imagenes web litho/logo 2.png" alt="logo1">
+                </div>    
+                
+            </div>
+            
+            <div class="Gestion">   
+                            
+                <h1 class="titulo">Actualizar Datos del Deportista.</h1>
+                <br>
+                <table class="tabla">
+                    
+                    <tr>
+                        <td><label for="UpdateNombre"><h2>Nombre:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateNombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateApellido"><h2>Apellidos:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateApellido"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateDni"><h2>DNI:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateDni"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateAnyo"><h2>Año de Nacimiento:</h2></label></td>
+                        <td><!-- <form action="action-page.php">
+                            <input type="date" class="etiqueta" name="search_date" id="Updateanyo" placeholder="Ingrese la fecha a buscar" required>
+                        </form> -->
+                            <input class="etiqueta" type="text" id="UpdateAnyo">
+                        </td>
+                    </tr>    
+                    <tr>
+                        <td><label for="UpdatePeso"><h2>Peso:</h2></label></td>
+                        <td><input class="etiqueta" type="number" id="UpdatePeso"></td>
+                    </tr>
+                    <tr>                        
+                        <td><label for="UpdateAltura"><h2>Altura:</h2></label></td>
+                        <td><input class="etiqueta" type="number" id="UpdateAltura"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateCategoria"><h2>Categoria:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateCategoria" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateFederado"><h2>Federado:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateFederado" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateTelefono"><h2>Teléfono:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateTelefono" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateEmergencia"><h2>Teléfono Emergencias:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateEmergencia" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateKyu"><h2>Nivel Kyu:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateKyu" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateUsuario"><h2>Usuario:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateUsuario" value=""></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label for="UpdatePassword"><h2>Password:</h2></label></td>
+                        <td><input class="etiqueta" type="password" id="UpdatePassword" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateTipousuario"><h2>Tipo Usuario:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateTipousuario" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="UpdateEntrenador"><h2>Entrenador:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="UpdateEntrenador" value=""></td>
+                    </tr>
+                    
+                </table>
+
+                <br>
+                <button class="boton" onclick="UpdateDeportista()">Actualizar Deportista</button>
+                
+                <div class="boton"><button onclick="location.href='paginaentrenador.html'">Salir</button></div>
+                
+                <h3>Información del resultado de actualizacion</h3>
+                <p>¿Hay error?: <span id="ErrorUpdate"></span></p>
+                <p>Mensaje: <span id="MessageUpdate"></span></p>
+                
+            </div> 
+            <div class="derecho">
+    
+                <div class="imagen"><img class="imagenes" src="imagenes web litho/logo 2.png" alt="logo1"></div>
+                <div class="imagen"><img class="imagenes" src="imagenes web litho/dia mundial judo.png" alt="logo1"></div>
+    
+            </div>
+        </div>
+        <hr><br>
+        <table>
+            <tr>
+                <td><div id="DatosDeportista"></div></td>
+                <td><div id="palmares"></div></td>
+            </tr>
+            <tr>
+                
+                <button class="boton" onclick="BajaDeportista()">Baja Deportista</button>
+                
+            </tr>
+        
+        </table>
+        <h2 class="titulo">Añadir Palmarés</h2>
+        <br>
+        <table>
+            <tr>
+                <td><label class="etiqueta" for="PalmaresAnyo">Año:</label></td>
+                <td><input class="etiqueta" type="text" id="PalmaresAnyo" value=""></td>
+                <td><label class="etiqueta" for="PalmaresCompeticion">Competición:</label></td>
+                <td><input class="etiqueta" type="text" id="PalmaresCompeticion" value=""></td>
+                <td><label class="etiqueta" for="PalmaresResultado">Resultado:</label></td>
+                <td><input class="etiqueta" type="text" id="PalmaresResultado" value=""></td>
+                <td><label class="etiqueta" for="PalmaresCategoria">Categoria:</label></td>
+                <td><input class="etiqueta" type="text" id="PalmaresCategoria" value=""></td>
+            </tr>
+                
+        </table><br>
+
+        <table>
+            <tr>
+                <td><button class="insertar" onclick="Actualizar_Palmares()">Añadir Palmares</button></td>
+                <td><button class="insertar" onclick="Resultados()">Consultar Palmarés</button></td>
+                <td><button class="insertar" onclick="AniadirClase()">Añadir clase</button></td>
+                <td><button class="insertar" onclick="Clases_Alumno()">Consultar Clases</button></td>
+
+            </tr>
+        </table>
+
+        <br>
+        <div class="titulo">
+            <h3>Información del resultado de actualizacion</h3>
+            <p>¿Hay error?: <span id="ErrorPalmares"></span></p>
+            <p>Mensaje: <span id="MessagePalmares"></span></p>
+        </div>
+
+    
+        <div class="pie">            
+            <p>勇敢さは恐れない者ではない、それは狂人だ。勇敢さは、恐怖にもかかわらず前進することを決心する人です。したがって、勇敢な人は他の人が夢を見ることしかできない場所に到着します。</p>
+        </div>
+    </div>
+    <!-- <script>
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1; //January is 0!
+        let yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+        if (mm < 10) {
+        mm = '0' + mm
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        let minimum = "1900-01-01";
+
+        let search_date = document.getElementById("Updateanyo");
+
+        search_date.max = today;
+        search_date.min = minimum;
+    </script> -->
+</body>
+</html>

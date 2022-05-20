@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="constantes.js"></script>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+
+    <script src="Gestion_Mensualidades.js"></script>
+
+    <link rel="stylesheet" href="estiloeconomico.css">
+    <title>Página Gestion Económica</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="divindex">
+            <img class="cabeceraimagen" src="imagenes web litho/cabecera litojudo.jpg" alt="">
+        </div>
+        <div class="general">
+            <div class="izquierdo">
+
+                <div class="imagen">
+                    <img class="imagenes" src="imagenes web litho/judo para todos.jpg" alt="logo1">
+                </div>
+                <div class="imagen">
+                    <img class="imagenes" src="imagenes web litho/logo 2.png" alt="logo1">
+                </div>
+
+            </div>
+
+            <div class="botones">
+
+                <div class="linea"><h3>Los deportistas enmarcados en rojo son deportistas dados de baja</h3></div>
+                <br>
+                <div class="boton"><button onclick="Ver_Repeticiones()">CREAR MENSUALIDADES</button></div>
+                <!-- <div class="boton"><button>AÑADIR GASTO</button></div>
+                    <div class="boton"><button onclick="">AÑADIR COBRO</button></div><br> -->
+                <div class="boton"><button onclick="location.href='paginaentrenador.html'">SALIR</button></div>
+
+            </div>
+            <div class="error">
+                <h3>Información del resultado de operacion</h3>
+                <p>¿Hay error?: <span id="ErrorOp"></span></p>
+                <p>Mensaje: <span id="MessageOp"></span></p>
+            </div>
+
+
+            <div class="derecho">
+                <div class="imagen"><img class="imagenes" src="imagenes web litho/logo 2.png" alt="logo1"></div>
+                <div class="imagen"><img class="imagenes" src="imagenes web litho/dia mundial judo.png" alt="logo1"></div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="Datos" id="Datos">
+            <div id="mensualidad"></div>
+        </div>
+        <!-- <div class="categoria">
+            <p><h2>Categoria Benjamín
+            <div id="benjamin"></div></h2></p>
+        </div>
+        <br><hr><br>
+        <div class="categoria">
+            <p><h2>Categoria Alevín
+            <div id="alevin"></div></h2></p>
+        </div>
+        <br><hr><br>
+        <div class="categoria">
+            <p><h2>Categoria Infantil
+            <div id="infantil"></div></h2></p>
+        </div>
+        <br><hr><br>
+        <div class="categoria">
+            <p><h2>Categoria Cadete
+            <div id="cadete"></div></h2></p>
+        </div>
+        <br><hr><br>
+        <div class="categoria">
+            <p><h2>Categoria Juvenil
+            <div id="juvenil"></div></h2></p>
+        </div>
+        <br><hr><br>
+        <div class="categoria">
+            <p><h2>Categoria Senior
+            <div id="senior"></div></h2></p>
+        </div>  -->
+
+        <div class="pie">
+            <p>勇敢さは恐れない者ではない、それは狂人だ。勇敢さは、恐怖にもかかわらず前進することを決心する人です。したがって、勇敢な人は他の人が夢を見ることしかできない場所に到着します。</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

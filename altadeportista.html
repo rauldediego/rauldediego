@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="constantes.js"></script>
+    <script src="https://agomcue486.github.io/lenguajes-de-marcas/GoogleSheetDataBase.js"></script>
+    <script src="Baja_Deportista.js"></script>
+    <script src="Alta_Deportista.js"></script>
+    <link rel="stylesheet" href="actualizardeportistas.css">
+    <title>Alta Nuevo Deportista</title>
+</head>
+<body>
+    <div class="contenedor">   
+        <div class="divindex">
+            <img class="cabeceraimagen" src="imagenes web litho/cabecera litojudo.jpg" alt="">
+        </div>
+        <div class="general">
+            <div class="izquierdo">
+                
+                <div class="imagen">
+                    <img class="imagenes" src="imagenes web litho/judo para todos.jpg" alt="logo1">
+                </div>
+                <div class="imagen">
+                    <img class="imagenes" src="imagenes web litho/logo 2.png" alt="logo1">
+                </div>    
+                
+            </div>
+            
+            <div class="Gestion">   
+                            
+                <h1 class="titulo">Alta Nuevo Deportista.</h1>
+                <br>
+                <table>
+                    
+                    <tr>
+                        <td><label for="InsertNombre"><h2>Nombre:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertNombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertApellido"><h2>Apellidos:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertApellido"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertDni"><h2>DNI:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertDni"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertAnyo"><h2>Año de Nacimiento:</h2></label></td>
+                        <td><!-- <form action="action-page.php">
+                            <input type="date" class="etiqueta" name="search_date" id="Updateanyo" placeholder="Ingrese la fecha a buscar" required>
+                        </form> -->
+                            <input class="etiqueta" type="text" id="InsertAnyo">
+                        </td>
+                    </tr>    
+                    <tr>
+                        <td><label for="InsertPeso"><h2>Peso:</h2></label></td>
+                        <td><input class="etiqueta" type="number" id="InsertPeso"></td>
+                    </tr>
+                    <tr>                        
+                        <td><label for="InsertAltura"><h2>Altura:</h2></label></td>
+                        <td><input class="etiqueta" type="number" id="InsertAltura"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertFederado"><h2>Federado:(SI/NO)</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertFederado" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertTelefono"><h2>Teléfono:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertTelefono" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertEmergencia"><h2>Teléfono Emergencias:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertEmergencia" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertKyu"><h2>Nivel Kyu:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertKyu" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertUsuario"><h2>Usuario:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertUsuario" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertPassword"><h2>Password:</h2></label></td>
+                        <td><input class="etiqueta" type="password" id="InsertPassword" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="InsertTipousuario"><h2>Tipo Usuario:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertTipousuario" value=""></td>
+                    </tr>
+                    <!-- <tr>
+                        <td><label for="InsertClase"><h2>Clase:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertClase" value=""></td>
+                    </tr> -->
+                    <tr>
+                        <td><label for="InsertEntrenador"><h2>Entrenador:</h2></label></td>
+                        <td><input class="etiqueta" type="text" id="InsertEntrenador" value=""></td>
+                    </tr>
+                    
+                </table>
+                <br>
+                <button class="insertar" onclick="AltaDeportista()">DAR DE ALTA</button>
+                <br>
+                <div class="boton"><button onclick="location.href='paginaentrenador.html'">SALIR</button></div>
+                <h3>Información del resultado de actualizacion</h3>
+                <p>¿Hay error?: <span id="ErrorInsert"></span></p>
+                <p>Mensaje: <span id="MessageInsert"></span></p>
+                
+            </div> 
+            <div class="derecho">
+    
+                <div class="imagen"><img class="imagenes" src="imagenes web litho/logo 2.png" alt="logo1"></div>
+                <div class="imagen"><img class="imagenes" src="imagenes web litho/dia mundial judo.png" alt="logo1"></div>
+    
+            </div>n 
+        </div>
+        <div id="DatosDeportista"></div>
+
+        <div class="pie">            
+            <p>勇敢さは恐れない者ではない、それは狂人だ。勇敢さは、恐怖にもかかわらず前進することを決心する人です。したがって、勇敢な人は他の人が夢を見ることしかできない場所に到着します。</p>
+        </div>
+    </div>
+
+</body>
+</html>
